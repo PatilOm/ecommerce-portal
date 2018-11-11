@@ -9,6 +9,14 @@
 	<name>pro-frontend Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+
+		<!-- Linking backend project -->
+		<dependency>
+			<groupId>com.omkar</groupId>
+			<artifactId>pro</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -30,7 +38,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>5.0.8.RELEASE</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
