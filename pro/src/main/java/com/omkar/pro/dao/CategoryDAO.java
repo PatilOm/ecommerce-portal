@@ -6,10 +6,13 @@ import com.omkar.pro.dto.Category;
 
 public interface CategoryDAO {
 	
-	boolean add(Category category);
 	
 	
+	Category get(int id);
 	List<Category> list();
-	Category get(int id); 
+	 
+	boolean add(Category category);
+	boolean update(Category category);
+	boolean delete(Category category);
 
 }
