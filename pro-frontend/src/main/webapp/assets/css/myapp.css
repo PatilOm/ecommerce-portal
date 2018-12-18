@@ -5,6 +5,7 @@
  */
 html {
 	height: 100%;
+	width: 100%;
 }
 
 body {
@@ -35,4 +36,9 @@ custom styling
 	position:absolute;
 	bottom:0;
 	height:60px;
+}
+
+.dataTableImg{
+	width:40px;
+	height:40px;
 }
