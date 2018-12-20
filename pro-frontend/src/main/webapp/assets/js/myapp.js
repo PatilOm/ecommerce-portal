@@ -8,6 +8,9 @@ $(function() {
 	case 'All Products':
 		$('#listProducts').addClass('active');
 		break;
+	case 'Manage Products':
+		$('#manageProducts').addClass('active');
+		break;
 	case 'Contact Us':
 		$('#contact').addClass('active');
 		break;
