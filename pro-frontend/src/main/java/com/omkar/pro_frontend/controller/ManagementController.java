@@ -2,6 +2,7 @@ package com.omkar.pro_frontend.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -20,6 +21,7 @@ import com.omkar.pro.dao.CategoryDAO;
 import com.omkar.pro.dao.ProductDAO;
 import com.omkar.pro.dto.Category;
 import com.omkar.pro.dto.Product;
+import com.omkar.pro_frontend.util.FileUploadUtility;
 
 @Controller
 @RequestMapping("/manage")
@@ -57,7 +59,7 @@ public class ManagementController {
 	
 	//handling product submission
 	@RequestMapping(value="/products", method=RequestMethod.POST)
-	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult results, Model model) {
+	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult results, Model model, HttpServletRequest request) {
 		
 		//check if there are any errors
 		if(results.hasErrors()) {
@@ -70,6 +72,9 @@ public class ManagementController {
 		logger.info(mProduct.toString());
 		//create a new product record
 		productDAO.add(mProduct);
+		if(!mProduct.getFile().getOriginalFilename().equals("")) {
+			FileUploadUtility.uploadFile(request, mProduct.getFile(), mProduct.getCode());
+		}
 		return "redirect:/manage/products?operation=product";
 	}
 	
