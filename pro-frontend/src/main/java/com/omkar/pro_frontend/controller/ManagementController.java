@@ -22,6 +22,7 @@ import com.omkar.pro.dao.ProductDAO;
 import com.omkar.pro.dto.Category;
 import com.omkar.pro.dto.Product;
 import com.omkar.pro_frontend.util.FileUploadUtility;
+import com.omkar.pro_frontend.validator.ProductValidator;
 
 @Controller
 @RequestMapping("/manage")
@@ -60,6 +61,8 @@ public class ManagementController {
 	//handling product submission
 	@RequestMapping(value="/products", method=RequestMethod.POST)
 	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult results, Model model, HttpServletRequest request) {
+		
+		new ProductValidator().validate(mProduct, results);
 		
 		//check if there are any errors
 		if(results.hasErrors()) {
