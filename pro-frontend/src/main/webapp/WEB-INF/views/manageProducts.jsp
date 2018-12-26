@@ -98,4 +98,79 @@
 
 	</div>
 
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>Available Products</h3>
+			<hr/>
+		</div>
+		<div class="col-xs-12">
+			<div style="overflow:auto">
+				<!-- Product table for admin -->
+				<table id="adminProductsTable" class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>&#160;</th>
+							<th>Name</th>
+							<th>Quantity</th>
+							<th>Unit Price</th>
+							<th>Active</th>
+							<th>Edit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>
+								<img class="adminDataTableImg" src="${contextRoot}/resources/images/PRDABC123.jpg" alt="YOGA"/>
+							</td>
+							<td>YOGA</td>
+							<td>3</td>
+							<td>&#8377; 45000.0/-</td>
+							<td>
+								<!-- toggle switch -->
+								<label class="switch">
+									<input type="checkbox" checked="checked" value="1"/>
+									<div class="slider"></div>
+								</label>
+							</td>
+							<td>
+								<a href="${contextRoot}/manage/1/product" class="btn btn-warning">Edit</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>
+								<img class="adminDataTableImg" src="${contextRoot}/resources/images/PRDABC123.jpg" alt="YOGA"/>
+							</td>
+							<td>YOGA</td>
+							<td>3</td>
+							<td>&#8377; 45000.0/-</td>
+							<td>
+								<!-- toggle switch -->
+								<label class="switch">
+									<input type="checkbox" value="1"/>
+									<div class="slider"></div>
+								</label>
+							</td>
+							<td>
+								<a href="${contextRoot}/manage/1/product" class="btn btn-warning">Edit</a>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Id</th>
+							<th>&#160;</th>
+							<th>Name</th>
+							<th>Quantity</th>
+							<th>Unit Price</th>
+							<th>Active</th>
+							<th>Edit</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
