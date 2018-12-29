@@ -89,6 +89,9 @@
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.bundle.min.js"></script>
 
+		<!-- jquery validator -->
+		<script src="${js}/jquery.validate.js"></script>
+		
 		<!-- DataTable plugin -->
 		<script src="${js}/jquery.dataTables.js"></script>
 
