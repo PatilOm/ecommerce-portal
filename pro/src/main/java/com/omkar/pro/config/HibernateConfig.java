@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @ComponentScan(basePackages= {"com.omkar.pro.dto"})
-@EnableWebMvc
+//@EnableWebMvc
 @EnableTransactionManagement
 public class HibernateConfig {
 	
