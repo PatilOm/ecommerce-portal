@@ -24,8 +24,9 @@ CREATE TABLE user_detail (
 	CONSTRAINT pk_user_id PRIMARY KEY(id)
 );
 
-INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Omkar','Patil','ADMIN',true,'admin','op@gmail.com','88888888');
-INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Akash','Patil','SUPPLIER',true,'12345','ap@gmail.com','77777777');
+INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Omkar','Patil','ADMIN',true,'$2b$10$8UaWNKCD2swzwi2Do9YoK.7cAah/GDB76MSdhr9cXaogxXJwo0vgy','op@gmail.com','88888888');
+INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Akash','Patil','SUPPLIER',true,'$2b$10$m18gypBxvJh19lW.AVA2r.5iRmDvKg8dD4sDJoPVlKDH1njHj/fw2','ap@gmail.com','77777777');
+INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Ramesh','Patil','USER',true,'$2b$10$m18gypBxvJh19lW.AVA2r.5iRmDvKg8dD4sDJoPVlKDH1njHj/fw2','rp@gmail.com','77777888');
 
 CREATE TABLE product (
 	id IDENTITY,
