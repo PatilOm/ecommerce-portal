@@ -23,6 +23,7 @@ public class Cart implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	//linking the cart with user
 	@OneToOne
 	private User user;
 	public User getUser() {
