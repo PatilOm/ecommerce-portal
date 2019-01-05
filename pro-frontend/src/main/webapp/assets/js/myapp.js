@@ -90,12 +90,14 @@ $(function() {
 							mRender: function(data, type, row){
 								var str = '';
 								str += '<a href="'+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary">View</a>&nbsp';
-								if(row.quantity < 1){
-									str += '<a href="javascript:void(0)" class="btn btn-success disabled">Add To Cart</a>';
+								
+								if(userRole == 'ADMIN'){
+									str += '<a href="'+window.contextRoot+'/manage/'+data+'/product" class="btn btn-warning">Edit</a>';
 								}
 								else{
-									if(userRole == 'ADMIN'){
-										str += '<a href="'+window.contextRoot+'/manage/'+data+'/product" class="btn btn-warning">Edit</a>';
+								
+									if(row.quantity < 1){
+										str += '<a href="javascript:void(0)" class="btn btn-success disabled">Add To Cart</a>';
 									}
 									else{
 										str += '<a href="'+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success">Add To Cart</a>';
