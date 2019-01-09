@@ -3,7 +3,6 @@ package com.omkar.pro.dao;
 import java.util.List;
 
 import com.omkar.pro.dto.Address;
-import com.omkar.pro.dto.Cart;
 import com.omkar.pro.dto.User;
 
 public interface UserDAO {
@@ -20,8 +19,7 @@ public interface UserDAO {
 		//Address getBillingAddress(int userId);
 		//List<Address> listShippingAddress(int userId);
 		
-		//update a cart
-		boolean updateCart(Cart cart);
+		
 }
 
 

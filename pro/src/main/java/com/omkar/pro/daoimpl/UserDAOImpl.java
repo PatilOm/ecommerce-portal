@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.omkar.pro.dao.UserDAO;
 import com.omkar.pro.dto.Address;
-import com.omkar.pro.dto.Cart;
 import com.omkar.pro.dto.User;
 
 @Repository("userDAO")
@@ -35,18 +34,6 @@ public class UserDAOImpl implements UserDAO {
 	public boolean addAddress(Address address) {
 		try {
 			sessionFactory.getCurrentSession().persist(address);
-			return true;
-		}
-		catch(Exception ex) {
-			ex.printStackTrace();
-			return false;
-		}
-	}
-
-	@Override
-	public boolean updateCart(Cart cart) {
-		try {
-			sessionFactory.getCurrentSession().update(cart);
 			return true;
 		}
 		catch(Exception ex) {

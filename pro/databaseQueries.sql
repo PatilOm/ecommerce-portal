@@ -24,9 +24,9 @@ CREATE TABLE user_detail (
 	CONSTRAINT pk_user_id PRIMARY KEY(id)
 );
 
-INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Omkar','Patil','ADMIN',true,'$2b$10$8UaWNKCD2swzwi2Do9YoK.7cAah/GDB76MSdhr9cXaogxXJwo0vgy','op@gmail.com','88888888');
-INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Akash','Patil','SUPPLIER',true,'$2b$10$m18gypBxvJh19lW.AVA2r.5iRmDvKg8dD4sDJoPVlKDH1njHj/fw2','ap@gmail.com','77777777');
-INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Ramesh','Patil','USER',true,'$2b$10$m18gypBxvJh19lW.AVA2r.5iRmDvKg8dD4sDJoPVlKDH1njHj/fw2','rp@gmail.com','77777888');
+INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Omkar','Patil','ADMIN',true,'admin','op@gmail.com','88888888');
+INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Akash','Patil','SUPPLIER',true,'12345','ap@gmail.com','77777777');
+INSERT INTO user_detail(first_name,last_name,role,enabled,password,email,contact_number) VALUES('Ramesh','Patil','USER',true,'12345','rp@gmail.com','77777888');
 
 CREATE TABLE product (
 	id IDENTITY,
@@ -54,3 +54,16 @@ INSERT INTO product (code, name, brand, description, unit_price, quantity, is_ac
 VALUES ('PRDEFG456', 'PIANO', 'iBALL', 'This is some description', 500, 3, true, 3, 2, 0, 0 );
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
 VALUES ('PRDABC456', 'SURFACE', 'MICROSOFT', 'This is some description', 85000, 2, true, 1, 2, 0, 0 );
+
+CREATE TABLE cart_line(
+id IDENTITY,
+cart_id int,
+total DECIMAL(10,2),
+product_id int,
+product_count int,
+buying_price DECIMAL(10,2),
+is_available boolean,
+CONSTRAINT fk_cartline_cart_id FOREIGN KEY (cart_id) REFERENCES cart (id),
+CONSTRAINT fk_cartline_product_id FOREIGN KEY (product_id) REFERENCES product (id),
+CONSTRAINT pk_cartline_id PRIMARY KEY (id)
+);
