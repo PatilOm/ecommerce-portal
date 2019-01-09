@@ -57,7 +57,7 @@ public class CartLineTestCase {
 		
 		cartLine.setTotal(cartLine.getProductCount() * product.getUnitPrice());
 		
-		cartLine.setAvailabe(true);
+		cartLine.setAvailable(true);
 		
 		cartLine.setCartId(cart.getId());
 		

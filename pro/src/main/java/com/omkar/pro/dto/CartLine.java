@@ -38,7 +38,7 @@ public class CartLine implements Serializable {
 	private double buyingPrice;
 	
 	@Column(name = "is_available")
-	private boolean availabe = true;
+	private boolean available = true;
 
 	/*setters and getters*/
 	public int getId() {
@@ -89,12 +89,12 @@ public class CartLine implements Serializable {
 		this.buyingPrice = buyingPrice;
 	}
 
-	public boolean isAvailabe() {
-		return availabe;
+	public boolean isAvailable() {
+		return available;
 	}
 
-	public void setAvailabe(boolean availabe) {
-		this.availabe = availabe;
+	public void setAvailable(boolean availabe) {
+		this.available = availabe;
 	}
 	
 }
