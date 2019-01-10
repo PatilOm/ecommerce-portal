@@ -47,7 +47,7 @@
 							<td data-th="Subtotal" class="text-center">&#8377; ${cartLine.total}</td>
 							<td class="actions" data-th="">
 								<button type="button" name="refreshCart" value="${cartLine.id}" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+								<a href="${contextRoot}/cart/${cartLine.id}/delete" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>								
 							</td>
 						</tr>
 						</c:forEach>

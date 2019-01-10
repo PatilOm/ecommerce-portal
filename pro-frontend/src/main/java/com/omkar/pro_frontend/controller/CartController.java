@@ -26,6 +26,9 @@ public class CartController {
 			case "updated":
 				mv.addObject("message", "CartLine has been updated successfully!");
 				break;
+			case "deleted":
+				mv.addObject("message", "CartLine has been removed successfully!");
+				break;
 			case "error":
 				mv.addObject("message", "Something went wrong!");
 				break;
@@ -42,6 +45,13 @@ public class CartController {
 	@RequestMapping("/{cartLineId}/update")
 	public String updateCart(@PathVariable int cartLineId, @RequestParam int count) {
 		String response = cartService.updateCartLine(cartLineId, count);
+		
+		return "redirect:/cart/show?"+response;
+	}
+	
+	@RequestMapping("/{cartLineId}/delete")
+	public String deleteCart(@PathVariable int cartLineId) {
+		String response = cartService.deleteCartLine(cartLineId);
 		
 		return "redirect:/cart/show?"+response;
 	}
