@@ -178,12 +178,12 @@ public class UserTestCase {
 //		assertEquals("Failed to add shipping adddress!", true, userDAO.addAddress(address));
 //	}
 	
-	@Test
-	public void testGetAddresses() {
-		user = userDAO.getByEmail("op@gmail.com");
-		
-		assertEquals("Failed to fetch list of addresses and size doesnot match!", 2, userDAO.listShippingAddress(user).size());
-		
-		assertEquals("Failed to fetch billing address and size doesnot match!", "Dombivli", userDAO.getBillingAddress(user).getCity());
-	}
+//	@Test
+//	public void testGetAddresses() {
+//		user = userDAO.getByEmail("op@gmail.com");
+//		
+//		assertEquals("Failed to fetch list of addresses and size doesnot match!", 2, userDAO.listShippingAddress(user).size());
+//		
+//		assertEquals("Failed to fetch billing address and size doesnot match!", "Dombivli", userDAO.getBillingAddress(user).getCity());
+//	}
 }

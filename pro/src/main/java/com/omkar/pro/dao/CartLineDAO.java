@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.omkar.pro.dto.Cart;
 import com.omkar.pro.dto.CartLine;
+import com.omkar.pro.dto.OrderDetail;
 
 public interface CartLineDAO {
 	
@@ -20,4 +21,7 @@ public interface CartLineDAO {
 	
 	//update a cart
 	boolean updateCart(Cart cart);
+	
+	// adding order details
+	boolean addOrderDetail(OrderDetail orderDetail);
 }
