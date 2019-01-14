@@ -20,7 +20,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Online Shopping - ${title}</title>
+<title>Computer Hub - ${title}</title>
 
 <script>
 	window.menu = '${title}';
