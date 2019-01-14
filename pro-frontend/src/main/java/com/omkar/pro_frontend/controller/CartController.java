@@ -86,7 +86,7 @@ public class CartController {
 			return "redirect:/cart/show?"+response;
 		}
 		else {
-			return "redirect:/cart/checkout";
+			return "redirect:/checkout";
 		}
 	}
 	

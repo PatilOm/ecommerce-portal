@@ -28,6 +28,10 @@
             <li id="contact">
               <a class="nav-link" href="${contextRoot}/contact">Contact</a>
             </li>
+            
+            <li id="checkout">
+              <a class="nav-link" href="${contextRoot}/checkout">Checkout</a>
+            </li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
@@ -38,6 +42,7 @@
             <li id="login">
               <a class="nav-link" href="${contextRoot}/login">Login</a>
             </li>
+            
             </security:authorize>
             
             <security:authorize access="isAuthenticated()">
